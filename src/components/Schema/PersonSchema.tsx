@@ -15,7 +15,7 @@ export default function PersonSchema() {
   const email = emailItem?.link.replace('mailto:', '');
 
   // Current job from work.ts (first entry)
-  const currentJob = work[0];
+  // const currentJob = work[0];
 
   const personData = {
     '@context': 'https://schema.org',
@@ -23,19 +23,19 @@ export default function PersonSchema() {
     name: AUTHOR_NAME,
     url: SITE_URL,
     image: `${SITE_URL}/images/me.jpg`,
-    jobTitle: currentJob.position,
+    // jobTitle: currentJob.position,
     ...(email && { email }),
     sameAs: socialLinks,
-    worksFor: {
-      '@type': 'Organization',
-      name: currentJob.name,
-      url: currentJob.url,
-    },
-    alumniOf: degrees.map((degree) => ({
-      '@type': 'CollegeOrUniversity',
-      name: degree.school,
-      url: degree.link,
-    })),
+    // worksFor: {
+    // '@type': 'Organization',
+    // name: currentJob.name,
+    // url: currentJob.url,
+    // },
+    // alumniOf: degrees.map((degree) => ({
+    // '@type': 'CollegeOrUniversity',
+    // name: degree.school,
+    // url: degree.link,
+    // })),
   };
 
   return <JsonLd data={personData} />;
