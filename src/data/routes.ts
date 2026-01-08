@@ -23,7 +23,7 @@ const routes: Route[] = [
     path: '/projects',
   },
   {
-    label: 'Contact Me',
+    label: 'Contact',
     path: '/contact',
   },
 ];
