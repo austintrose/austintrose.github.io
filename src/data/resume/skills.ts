@@ -122,7 +122,8 @@ const skills: Skill[] = [
   //   competency: 4,
   //   category: ['Infrastructure', 'ML Engineering'],
   // },
-].map((skill) => ({ ...skill, category: skill.category.sort() }));
+]
+// ].map((skill) => ({ ...skill, category: skill.category.sort() }));
 
 /**
  * Category colors with pre-computed text contrast.
